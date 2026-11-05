@@ -12,7 +12,9 @@ import { readFile as fsReadFile } from 'node:fs/promises';
  * const data = JSON.parse(content);
  * ```
  */
-export const readFile = async (
+export async function readFile(
   filePath: string,
   encoding: BufferEncoding = 'utf-8',
-): Promise<string> => fsReadFile(filePath, encoding);
+): Promise<string> {
+  return fsReadFile(filePath, encoding);
+}
