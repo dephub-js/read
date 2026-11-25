@@ -5,7 +5,6 @@ import { Command, CommandError } from '@dephub/command';
 import { logger } from '@dephub/logger';
 
 import { readFile } from './core/read.ts';
-import { description, name, version } from './utils/pkg.ts';
 
 const VALID_ENCODINGS = [
   'utf8',
@@ -19,9 +18,9 @@ const VALID_ENCODINGS = [
 ] as const;
 
 const cmd = new Command()
-  .name(name.split('/')[1] ?? 'read')
-  .version(version)
-  .description(description)
+  .name(__PKG_NAME__.split('/')[1])
+  .version(__PKG_VERSION__)
+  .description(__PKG_DESCRIPTION__)
   .argument('filePath', 'Path to the file to read')
   .option('encoding', {
     description: `File encoding (default: utf8). Supported: ${VALID_ENCODINGS.join(', ')}`,

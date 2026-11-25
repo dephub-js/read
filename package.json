@@ -1,7 +1,7 @@
 {
   "name": "@dephub/read",
   "type": "module",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "File reading utility for Node.js with simple API and CLI",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
