@@ -4,8 +4,8 @@
 import { Command, CommandError } from '@dephub/command';
 import { logger } from '@dephub/logger';
 
-import { readFile } from './core/read.js';
-import { description, name, version } from './utils/pkg.js';
+import { readFile } from './core/read.ts';
+import { description, name, version } from './utils/pkg.ts';
 
 const VALID_ENCODINGS = [
   'utf8',
